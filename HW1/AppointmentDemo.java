@@ -1,4 +1,4 @@
-package Homework1;
+package HW1;
 //NAME CRYSTAL LUONG
 import java.util.Scanner;
 

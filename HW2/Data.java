@@ -14,13 +14,13 @@ public class Data extends BankAccount
       {
          if (obj instanceof BankAccount) {
             Filter X = (Filter) obj; 
-            if (X.Accept(limit)) {
+            if (X.accept(limit)) {
                sum = sum + obj.getMeasure();
                count++;
             }
          }
 
-        else if { 
+        else { 
            sum = sum + obj.getMeasure();
             count++;
         }

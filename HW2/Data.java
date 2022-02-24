@@ -13,13 +13,21 @@ public class Data extends BankAccount
 
  
        double sum = 0;
+       double limit = 1000; 
        int count = 0; 
        for (Measurable obj : objects) {
 
-         if (obj instanceof BankAccount && ((BankAccount) obj).accept(Double.valueOf(((BankAccount) obj).getBalance()))) {
-         // double limit = (double) Y; 
-              sum = sum + ((BankAccount) obj).getMeasure();
+         if (obj instanceof BankAccount) {
+                  Filter X = (Filter) obj;
+
+         if (X.Accept(limit)) {
+         sum = sum + obj.getMeasure();
               count++; 
+              }
+         //obj instanceof BankAccount && ((BankAccount) obj).accept(Double.valueOf(((BankAccount) obj).getBalance()))) {
+         // double limit = (double) Y; 
+              //sum = sum + ((BankAccount) obj).getMeasure();
+             
          }
          else if (obj instanceof Country) {
            sum += ((Country) obj).getMeasure();

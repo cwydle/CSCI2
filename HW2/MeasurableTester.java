@@ -6,8 +6,8 @@
      public static void main(String[] args)
      {
         Measurable[] accounts = new Measurable[3];
-        accounts[0] = new BankAccount(500);
-        accounts[1] = new BankAccount(372);
+        accounts[0] = new BankAccount(0);
+        accounts[1] = new BankAccount(10000);
         accounts[2] = new BankAccount(2000);
   
         double averageBalance = Data.average(accounts);

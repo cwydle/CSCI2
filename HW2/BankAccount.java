@@ -55,14 +55,14 @@
       {
          return balance;
       }
-    public boolean accept(Object X) {
+    public boolean accept(Object Y) {
       //  return ((BankAccount) Y).getBalance() >= 1000;
 
-      // double limit = (double) Y; 
+      double limit = (double) Y; 
                 // cast as a double 
                 //limit = 1000
                 //this code is all correct
-       if(balance >= 1000) {
+       if(balance > limit) {
           return true;
         }
      else

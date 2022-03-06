@@ -16,18 +16,18 @@ public class Total
       Scanner console = new Scanner(System.in);
       System.out.print("Input file: ");
       String inputFileName = console.next();
-      // System.out.print("Output file for boy: ");
-      // String outputFileNameBoy = console.next();
-      // System.out.print("Output file for girl: ");
-      // String outputFileNameGirl = console.next();
+      System.out.print("Output file for boy: ");
+      String outputFileNameBoy = console.next();
+      System.out.print("Output file for girl: ");
+      String outputFileNameGirl = console.next();
 
 
       // Construct the Scanner and PrintWriter objects for reading and writing
 
       File inputFile = new File(inputFileName);
       Scanner in = new Scanner(inputFile);
-      // PrintWriter outB = new PrintWriter(outputFileNameBoy);
-      // PrintWriter outG = new PrintWriter(outputFileNameGirl);
+      PrintWriter outB = new PrintWriter(outputFileNameBoy);
+      PrintWriter outG = new PrintWriter(outputFileNameGirl);
 
 
       // Read the input and write the output

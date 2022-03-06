@@ -51,8 +51,8 @@ public class Total
 // 3) what's the name of baby (boy or girl) that first crossed 10 Millionth babies (summing from most popular baby names, that is, from the top down.)? (2 points)
 
          //michael will be stored in B. the cursor goes to the next element which is the number 462086
-         // outB.printf("%s\n", B);
-         // outG.printf("%s\n", E);
+         outB.printf("%s\n", B);
+         outG.printf("%s\n", E);
          //the last item is stored in String G. The "in" goes to the next line which is 2. 
          //.next() will store the token in the object and then goes to the next line 
          //put the String A = in.next() into a loop

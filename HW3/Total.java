@@ -31,6 +31,10 @@ public class Total
          String B = in.next();
          int C = in.nextInt();
          totalB += C; 
+         if (totalB + totalG > tenmillionth && found == false) {
+            All = B; 
+            found = true; 
+         }
          double D = in.nextDouble();
          String E = in.next();         
          int F = in.nextInt();

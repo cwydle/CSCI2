@@ -3,15 +3,10 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-/**
-   This program reads a file with numbers, and writes the numbers to another
-   file, lined up in a column and followed by their total. 
-*/
 public class Total
 {
    public static void main(String[] args) throws FileNotFoundException
    {
-      // Prompt for the input and output file names
 
       Scanner console = new Scanner(System.in);
       System.out.print("Input file: ");
@@ -20,51 +15,56 @@ public class Total
       String outputFileNameBoy = console.next();
       System.out.print("Output file for girl: ");
       String outputFileNameGirl = console.next();
-
-
-      // Construct the Scanner and PrintWriter objects for reading and writing
-
       File inputFile = new File(inputFileName);
       Scanner in = new Scanner(inputFile);
       PrintWriter outB = new PrintWriter(outputFileNameBoy);
       PrintWriter outG = new PrintWriter(outputFileNameGirl);
 
-
-      // Read the input and write the output
-
       int totalB = 0;
       int totalG = 0;       
+      int tenmillionth = 10000000; 
+      String All = ""; 
+      boolean found = false; 
       while (in.hasNext())
-      //grabs the next token 
       {
          String A = in.next();
-         //grabs the first token which is 1 and store it in A. 
-         //there are 7 tokens 
          String B = in.next();
          int C = in.nextInt();
          totalB += C; 
+         if (totalB + totalG > tenmillionth && found == false) {
+            All = B; 
+            found = true; 
+         }
          double D = in.nextDouble();
          String E = in.next();         
          int F = in.nextInt();
          totalG += F; 
          double G = in.nextDouble();
-// 3) what's the name of baby (boy or girl) that first crossed 10 Millionth babies (summing from most popular baby names, that is, from the top down.)? (2 points)
-
-         //michael will be stored in B. the cursor goes to the next element which is the number 462086
          outB.printf("%s\n", B);
          outG.printf("%s\n", E);
-         //the last item is stored in String G. The "in" goes to the next line which is 2. 
-         //.next() will store the token in the object and then goes to the next line 
-         //put the String A = in.next() into a loop
-         //need the 3rd and 6th item
       }
+      System.out.println("the name of the baby that first crossed 10 Millionth babies is " + All);
       System.out.println("The total number of baby boys born this year is " + totalB);
       System.out.println("The total number of baby girls born this year is " + totalG);
-
       in.close();
       outB.close();
       outG.close();
-
    }
 }
-
+//STeps
+// 1 read line by line
+//2. for each line
+//2.1 read  2nd token into boyname <---next(); 
+//2.2 write boy name to output 3
+//2.5 read 5th token (the girls name) 
+//2.4 write girls name to output
+// have it repeated in a while loop
+// While (in.hasNext()) {
+// String A = in.Next();
+// String B = in.Next(); 
+// int C = in.NextInt();
+// double D = in.NextDouble();
+// String E = in.Next();
+//int F = in.NextInt();
+// double G = in.Next Double(); // the cursor is at the next token
+//}

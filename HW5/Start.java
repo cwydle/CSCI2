@@ -22,8 +22,6 @@ public class Start {
         for (int i = 0; i < array.length; i++) {
             array[i] = ran.nextInt(101); // store random integers in an array        
     }
-    // Addup abc = new Addup();
-    // int totoal = abc.Sum(array, array.length-1); 
     int total = Sum(array, array.length-1); 
     //adds up the numbers in the arry
     System.out.println("the total is: " + total);

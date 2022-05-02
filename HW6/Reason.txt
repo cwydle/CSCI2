@@ -1,0 +1,4 @@
+Which sorting method would you recommend and why?
+I would recommend the merge sorting method because when dealing with a bigger dataset, the method uses less iteration. For the array size of 10,000,
+the selection sorting method uses 50,036,571 iteration whereas the merge sort uses 264,015. The difference in iteration is big. The bigger the iteration, the more time
+and memory will be used. That can make or break a company's profits. 
